@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/home_author2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鸿洋"
+        />
+        <TextView
+            android:id="@+id/home_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2109-10-08"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/home_article_img2"
+            android:src="@drawable/cxk"
+            />
+        <TextView
+            android:id="@+id/home_title2"
+            android:text="你好"
+            android:textColor="@color/colorBlack333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_article_img2"
+            />
+        <TextView
+            android:id="@+id/home_desc2"
+            android:text="你好"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_article_img2"
+            android:layout_below="@id/home_title2"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/home_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目专题"
+            />
+        <ImageView
+            android:id="@+id/home_connect2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_collect"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

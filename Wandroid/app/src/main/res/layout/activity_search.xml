@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.search.SearchActivity">
+    <RelativeLayout
+        android:id="@+id/search_main"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back" />
+        <ImageView
+            android:id="@+id/img_search_searcher"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_search" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_text"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:iconifiedByDefault="false"
+            android:queryHint="请输入搜索内容"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/search_back"
+            android:layout_centerHorizontal="true">
+
+        </androidx.appcompat.widget.SearchView>
+
+    </RelativeLayout>
+    <com.mr.tengyu.wandroid.utils.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="  热门搜索"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mr.tengyu.wandroid.utils.FlowLayout_zhao
+                    android:id="@+id/fl_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:backgroundResource="@drawable/bg_frame"
+                    app:horizontalSpacing="15dp"
+                    app:itemColor="@color/colorAccent"
+                    app:itemSize="15sp"
+                    app:textPaddingH="15dp"
+                    app:textPaddingV="8dp"
+                    app:verticalSpacing="15dp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="  搜索历史"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/search_greendao_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="无搜索记录" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/cleanAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="清空  "
+                    android:textSize="18sp" />
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/search_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:divider="@null"
+                android:dividerHeight="5dp"
+                android:focusable="false" />
+
+        </LinearLayout>
+
+    </com.mr.tengyu.wandroid.utils.MyScrollView>
+
+
+
+
+
+</LinearLayout>
